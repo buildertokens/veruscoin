@@ -19,8 +19,8 @@ steps:
 uses: actions/setup-go@v1
 with:
 go-version: ${{ matrix.go }}
-id: go
-- name: Setup
+id: gooo
+- name: bebyo
 uses: actions/checkout@v2
 - name: akuganteng
 run: |
